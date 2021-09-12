@@ -1,0 +1,67 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <avro.version>1.8.2</avro.version>
+      <kafka.version>2.2.0</kafka.version>
+      <confluent.version>5.1.2</confluent.version>
+  </properties>
+	
+	<repositories>
+		<repository>
+			<id>confluent</id>
+			<url>http://packages.confleunt.io/maven</url>
+		</repository>
+	</repositories>
+	
+  <modelVersion>4.0.0</modelVersion>
+	
+  <parent>
+    <groupId>com.uhg</groupId>
+    <artifactId>parent</artifactId>
+    <version>2.0.6</version>
+  </parent>	
+	
+  <groupId>com.optum.ecap</groupId>
+  <artifactId>EcapKafkaPublisher</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>EcapKafkaPublisher</name>
+
+	<dependencies>
+		<dependency>
+		    <groupId>org.apache.kafka</groupId>
+		    <artifactId>kafka-clients</artifactId>
+		    <version>${kafka.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.kafka</groupId>
+		    <artifactId>kafka-streams</artifactId>
+		    <version>${kafka.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-api</artifactId>
+		    <version>1.8.0-beta2</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.apache.avro</groupId>
+		    <artifactId>avro</artifactId>
+		    <version>${avro.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.confluent</groupId>
+		    <artifactId>kafka-avro-serializer</artifactId>
+		    <version>${confluent.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.confluent</groupId>
+		    <artifactId>common-config</artifactId>
+		    <version>${confluent.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>kafka-avro-confluent</groupId>
+		    <artifactId>kafka-avro-confluent</artifactId>
+		    <version>0.1.0</version>
+		</dependency>
+	</dependencies>
+</project>
